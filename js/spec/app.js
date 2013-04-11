@@ -1,6 +1,10 @@
 // check getting the GalleryImages
-if(app.GalleryImages.length < 0) {
-	alert("Not passed");
-}
-
-$("body").append("Good, passed all tests!");
+app.GalleryImages.fetch({
+	success: function() {
+		if(app.GalleryImages.length !== 15) {
+			alert("Not passed with length: "+app.GalleryImages.length);
+		} else {
+			$("body").append("Good, passed all tests!");
+		}
+	}
+});

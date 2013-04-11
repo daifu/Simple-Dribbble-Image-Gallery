@@ -5,9 +5,23 @@ var app = app || {};
 
 	app.AppView = Backbone.View.extend({
 		el: '#main',
-		template: _.template($("#image-gallery-list").html()),
 		initialize: function() {
-			app.GalleryImages.fetch();
+			var that = this;
+			app.GalleryImages.fetch({
+				success: function() {
+					that.render();
+				}
+			});
+		},
+		render: function() {
+			this.$el.empty();
+			app.GalleryImages.each(this.addOne, this);
+		},
+		addOne: function(model) {
+			var galleryImageView = new app.GalleryImageView({
+				model: model
+			});
+			this.$el.append(galleryImageView.render().el);
 		}
 	});
 

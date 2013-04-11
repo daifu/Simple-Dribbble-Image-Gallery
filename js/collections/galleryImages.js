@@ -13,6 +13,13 @@ var app = app || {};
 			options.dataType = "jsonp";
 			options.timeout = 10000; // required, or the application won't pick up on 404 responses
 			return Backbone.sync(method, model, options);
+		},
+		parse: function(response) {
+			this.page = response.page;
+			this.per_page = response.per_page;
+			this.pages = response.pages;
+			this.total = response.total;
+			return response.shots;
 		}
 	});
 
