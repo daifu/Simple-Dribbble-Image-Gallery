@@ -3,8 +3,11 @@ app.GalleryImages.fetch({
 	success: function() {
 		if(app.GalleryImages.length !== 15) {
 			alert("Not passed with length: "+app.GalleryImages.length);
-		} else {
-			$("body").append("Good, passed all tests!");
 		}
+		if ($("#main").children().length !== 15) {
+			alert("Not passed with length: "+$("#main").children().length);
+		}
+
+		$("body").append("Good, passed all tests!");
 	}
 });
