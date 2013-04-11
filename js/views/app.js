@@ -7,6 +7,8 @@ var app = app || {};
 		el: '#main',
 		initialize: function() {
 			var that = this;
+			var menuView = new app.MenuView();
+
 			app.GalleryImages.fetch({
 				success: function() {
 					that.render();

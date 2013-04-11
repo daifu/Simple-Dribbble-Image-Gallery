@@ -7,8 +7,10 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<section id="">
+		<section id="dribbbleapp">
 			<header id="header">
+				<section id="menu">
+				</section>
 			</header>
 			<section id="main">
 				<ul id="image-gallery-list"></ul>
@@ -24,6 +26,13 @@
 				</figcaption>
 			</figure>
 		</script>
+		<script type="text/template" id="menu-template">
+			<ul class="menu">
+				<li><a class="selected" href="#/Popular">Popular</a></li>
+				<li><a href="#/debuts">Debuts</a></li>
+				<li><a href="#/everyone">Everyone</a></li>
+			</ul>
+		</script>
 		<script src="components/jquery/jquery.js"></script>
 		<script src="components/underscore/underscore.js"></script>
 		<script src="components/backbone/backbone.js"></script>
@@ -31,6 +40,7 @@
 		<script src="js/collections/galleryImages.js"></script>
 		<script src="js/views/app.js"></script>
 		<script src="js/views/galleryImage.js"></script>
+		<script src="js/views/menu.js"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
