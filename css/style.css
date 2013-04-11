@@ -1,0 +1,33 @@
+.galleryImage {
+	width: 21%;
+	float: left;
+	margin-left: 0;
+	padding: 3%;
+	background: #eee;
+	border-radius: 20px;
+}
+
+.galleryImage img {
+	width: 100%;
+}
+
+.likes_count {
+	background: url('http://dribbble.com/images/icon-hearts.png') no-repeat;
+	top: 0;
+	left: 0;
+	padding-left: 16px
+}
+
+.comments_count {
+	background: url('http://dribbble.com/images/icon-views-sm.png') no-repeat;
+	top: 0;
+	left: 0;
+	padding-left: 16px
+}
+
+.stats {
+	display: inline;
+}
+.stats:last-child {
+	float: right;
+}

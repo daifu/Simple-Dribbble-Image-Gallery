@@ -16,11 +16,11 @@
 			<footer id="footer"></footer>
 		</section>
 		<script type="text/template" id="image-gallery-template">
-			<figure>
+			<figure class="galleryImage">
 				<img src="<%= image_url %>">
 				<figcaption>
-					<div class="stats">Likes: <%= likes_count %></div>
-					<div class="stats">Comments: <%= comments_count %></div>
+					<div class="stats likes_count"><%= likes_count %></div>
+					<div class="stats comments_count"><%= comments_count %></div>
 				</figcaption>
 			</figure>
 		</script>
