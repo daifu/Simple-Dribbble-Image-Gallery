@@ -15,14 +15,14 @@
 	background: url('http://dribbble.com/images/icon-hearts.png') no-repeat;
 	top: 0;
 	left: 0;
-	padding-left: 16px
+	padding-left: 18px;
 }
 
 .comments_count {
 	background: url('http://dribbble.com/images/icon-views-sm.png') no-repeat;
 	top: 0;
 	left: 0;
-	padding-left: 16px
+	padding-left: 18px;
 }
 
 .stats {

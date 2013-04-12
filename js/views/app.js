@@ -9,6 +9,9 @@ var app = app || {};
 			var that = this;
 			var menuView = new app.MenuView();
 
+			// add listener
+			this.listenTo(app.GalleryImages, 'reset', this.render);
+
 			app.GalleryImages.fetch({
 				success: function() {
 					that.render();

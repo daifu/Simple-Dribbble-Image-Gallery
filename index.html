@@ -18,19 +18,17 @@
 			<footer id="footer"></footer>
 		</section>
 		<script type="text/template" id="image-gallery-template">
-			<figure class="galleryImage">
-				<img src="<%= image_url %>">
-				<figcaption>
-					<div class="stats likes_count"><%= likes_count %></div>
-					<div class="stats comments_count"><%= comments_count %></div>
-				</figcaption>
-			</figure>
+			<img src="<%= image_url %>">
+			<figcaption>
+				<div class="stats likes_count"><%= likes_count %></div>
+				<div class="stats comments_count"><%= comments_count %></div>
+			</figcaption>
 		</script>
 		<script type="text/template" id="menu-template">
 			<ul class="menu">
-				<li><a class="selected" href="#/Popular">Popular</a></li>
-				<li><a href="#/debuts">Debuts</a></li>
-				<li><a href="#/everyone">Everyone</a></li>
+				<li><a data="popular" class="list <% if(listType === 'popular') {%>selected<%}%>" href="#/Popular">Popular</a></li>
+				<li><a data="debuts" class="list <% if(listType === 'debuts') {%>selected<%}%>" href="#/debuts">Debuts</a></li>
+				<li><a data="everyone" class="list <% if(listType === 'everyone') {%>selected<%}%>" href="#/everyone">Everyone</a></li>
 			</ul>
 		</script>
 		<script src="components/jquery/jquery.js"></script>
