@@ -11,6 +11,10 @@
 	width: 100%;
 }
 
+.galleryImage:nth-child(3n+1) {
+	margin-left: 5%;
+}
+
 .likes_count {
 	background: url('http://dribbble.com/images/icon-hearts.png') no-repeat;
 	top: 0;
@@ -58,4 +62,15 @@
 	background: #8f7f14;
 	color: white;
 	cursor: default;
+}
+
+#dribbbleapp {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+#main:after {
+	content: ".";
+	clear: both;
 }
