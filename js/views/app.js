@@ -8,9 +8,11 @@ var app = app || {};
 		initialize: function() {
 			var that = this;
 			var menuView = new app.MenuView();
+			var loadMoreView = new app.LoadMoreView();
 
 			// add listener
 			this.listenTo(app.GalleryImages, 'reset', this.render);
+			this.listenTo(app.GalleryImages, 'addMore', this.addMore);
 
 			app.GalleryImages.fetch({
 				success: function() {
@@ -27,6 +29,10 @@ var app = app || {};
 				model: model
 			});
 			this.$el.append(galleryImageView.render().el);
+		},
+		addMore: function() {
+			var newAddedImages = app.GalleryImages.getNewAddedImages();
+			newAddedImages.forEach(this.addOne, this);
 		}
 	});
 

@@ -26,6 +26,9 @@ var app = app || {};
 			this.pages = response.pages;
 			this.total = response.total;
 			return response.shots;
+		},
+		getNewAddedImages: function() {
+			return this.models.slice(this.length - this.per_page, this.length);
 		}
 	});
 
