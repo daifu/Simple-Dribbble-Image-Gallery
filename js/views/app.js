@@ -31,8 +31,7 @@ var app = app || {};
 			this.$el.append(galleryImageView.render().el);
 		},
 		addMore: function() {
-			var newAddedImages = app.GalleryImages.getNewAddedImages();
-			newAddedImages.forEach(this.addOne, this);
+			app.GalleryImages.each(this.addOne, this);
 		}
 	});
 

@@ -21,13 +21,9 @@ var app = app || {};
 		},
 		change: function(e) {
 			var data = $(e.target).attr("data");
-			console.log(data);
 			app.GalleryImages.fetch({
 				listType: data,
-				reset: true,
-				success: function() {
-					console.log(app.GalleryImages);
-				}
+				reset: true
 			});
 			this.render(data);
 		}
